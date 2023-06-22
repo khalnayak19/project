@@ -1,0 +1,212 @@
+<!-- footer -->
+<footer class="w3l-footer-29-main">
+    <div class="footer-29-w3l py-5">
+        <div class="container pt-md-5 pt-4">
+            <div class="w3l-footer-text-style">
+                <div class="footer-list-cont d-flex align-items-center justify-content-between mb-5">
+                    <h6 class="foot-sub-title">Contact Us</h6>
+                    <div class="main-social-footer-29">
+                        <a href="https://instagram.com/stream_ads_wedding_cinemas?igshid=YmMyMTA2M2Y=" class="instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://m.facebook.com/story.php?story_fbid=pfbid0EqvNLXZGrcaxSKTw8EPQyM9VFnfkQt5Lg7uzuuyKA5cqQF3MMtSCQbrKTch7A9eRl&id=100064537006374&mibextid=SDPelY" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com/stream_ads_photo_hub?igshid=YmMyMTA2M2Y=" class="instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row footer-top-29 pt-lg-5 pt-sm-4">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="address-grid">
+                        <h5>Stram Ads Wedding Cinemas<br>Thamarassery,Calicut<br>Kerala</h5>
+                        <h5 class="mt-sm-5 mt-4">Everyday: <span> 7 AM - 8 PM</span></h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mt-sm-0 mt-4">
+                    <div class="address-grid">
+                        <h5>Phone</h5>
+                        <h5 class="phone-number-text mt-2"><a href="tel:+1(21) 112 7368">+91 9544489966</a></h5>
+                    </div>
+                    <div class="address-grid mt-sm-5 mt-4">
+                        <h5>E-mail</h5>
+                        <h5 class="email-cont-text mt-1"> <a href="mailto:photogenic@mail.com"
+                                class="mail">streamads999@gmail.com</a></h5>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-5 footer-list-menu pl-lg-0 mt-lg-0 mt-sm-5 mt-4">
+                    <div class="address-grid">
+                        <h5 class="mb-4 pb-lg-2">Support Links</h5>
+                        <ul>
+                            <li><a>Privacy Policy</a></li>
+                            <li><a>Terms of Service</a></li>
+                            <li><a>Contact us</a></li>
+                            <li><a> Support</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="address-grid col-lg-4 col-md-6 col-sm-7 mt-lg-0 mt-sm-5 mt-4 w3l-footer-16-main">
+                    <!--<h5>Subscribe Here</h5>-->
+                    <!--<form action="#" class="subscribe d-flex mt-4 pt-lg-2 mb-4" method="post">
+                        <input type="email" name="email" placeholder="Email Address" required="">
+                        <button><span class="fa fa-paper-plane" aria-hidden="true"></span></button>
+                    </form>-->
+                    <!--<p>Subscribe to our mailing list and get updates to your email inbox.</p>-->
+                </div>
+            </div>
+            <!-- copyright -->
+            <div class="w3l-copyright text-center mt-lg-5 mt-sm-4 pt-md-4 pt-3">
+                <p class="copy-footer-29">©BookMyShoot <a
+                        href="https://w3layouts.com/" target="_blank">
+                    </a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- //footer -->
+
+<!-- Js scripts -->
+<!-- move top -->
+<button onclick="topFunction()" id="movetop" title="Go to top">
+    <span class="fas fa-level-up-alt" aria-hidden="true"></span>
+</button>
+<script>
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+        scrollFunction()
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("movetop").style.display = "block";
+        } else {
+            document.getElementById("movetop").style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+</script>
+<!-- //move top -->
+
+<!-- common jquery plugin -->
+<script src="/static/latest/assets/js/jquery-3.3.1.min.js"></script>
+<!-- //common jquery plugin -->
+
+<!-- theme switch js (light and dark)-->
+<script src="/static/latest/assets/js/theme-change.js"></script>
+<!-- //theme switch js (light and dark)-->
+
+<!-- libhtbox -->
+<script src="/static/latest/assets/js/lightbox-plus-jquery.min.js"></script>
+<!-- libhtbox -->
+
+<!-- counter for stats -->
+<script src="/static/latest/assets/js/counter.js"></script>
+<!-- //counter for stats -->
+
+<!-- testimonial script -->
+<script>
+    $(document).ready(function () {
+
+        $('.client-single').on('click', function (event) {
+            event.preventDefault();
+
+            var active = $(this).hasClass('active');
+
+            var parent = $(this).parents('.testi-wrap');
+
+            if (!active) {
+                var activeBlock = parent.find('.client-single.active');
+
+                var currentPos = $(this).attr('data-position');
+
+                var newPos = activeBlock.attr('data-position');
+
+                activeBlock.removeClass('active').removeClass(newPos).addClass('inactive').addClass(
+                    currentPos);
+                activeBlock.attr('data-position', currentPos);
+
+                $(this).addClass('active').removeClass('inactive').removeClass(currentPos).addClass(
+                    newPos);
+                $(this).attr('data-position', newPos);
+
+            }
+        });
+
+    }(jQuery));
+</script>
+<!-- //testimonial script -->
+
+<!-- MENU-JS -->
+<script>
+    $(window).on("scroll", function () {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 80) {
+            $("#site-header").addClass("nav-fixed");
+        } else {
+            $("#site-header").removeClass("nav-fixed");
+        }
+    });
+
+    //Main navigation Active Class Add Remove
+    $(".navbar-toggler").on("click", function () {
+        $("header").toggleClass("active");
+    });
+    $(document).on("ready", function () {
+        if ($(window).width() > 991) {
+            $("header").removeClass("active");
+        }
+        $(window).on("resize", function () {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+        });
+    });
+</script>
+<!-- //MENU-JS -->
+
+<!-- disable body scroll which navbar is in active -->
+<script>
+    $(function () {
+        $('.navbar-toggler').click(function () {
+            $('body').toggleClass('noscroll');
+        })
+    });
+</script>
+<!-- //disable body scroll which navbar is in active -->
+
+<!--bootstrap-->
+<script src="/static/latest/assets/js/bootstrap.min.js"></script>
+<!-- //bootstrap-->
+<!-- //Js scripts -->
+
+<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"> -->
+<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script> -->
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+
+    !function(e){e(["jquery"],function(e){return function(){function t(e,t,n){return g({type:O.error,iconClass:m().iconClasses.error,message:e,optionsOverride:n,title:t})}function n(t,n){return t||(t=m()),v=e("#"+t.containerId),v.length?v:(n&&(v=d(t)),v)}function o(e,t,n){return g({type:O.info,iconClass:m().iconClasses.info,message:e,optionsOverride:n,title:t})}function s(e){C=e}function i(e,t,n){return g({type:O.success,iconClass:m().iconClasses.success,message:e,optionsOverride:n,title:t})}function a(e,t,n){return g({type:O.warning,iconClass:m().iconClasses.warning,message:e,optionsOverride:n,title:t})}function r(e,t){var o=m();v||n(o),u(e,o,t)||l(o)}function c(t){var o=m();return v||n(o),t&&0===e(":focus",t).length?void h(t):void(v.children().length&&v.remove())}function l(t){for(var n=v.children(),o=n.length-1;o>=0;o--)u(e(n[o]),t)}function u(t,n,o){var s=!(!o||!o.force)&&o.force;return!(!t||!s&&0!==e(":focus",t).length)&&(t[n.hideMethod]({duration:n.hideDuration,easing:n.hideEasing,complete:function(){h(t)}}),!0)}function d(t){return v=e("<div/>").attr("id",t.containerId).addClass(t.positionClass),v.appendTo(e(t.target)),v}function p(){return{tapToDismiss:!0,toastClass:"toast",containerId:"toast-container",debug:!1,showMethod:"fadeIn",showDuration:300,showEasing:"swing",onShown:void 0,hideMethod:"fadeOut",hideDuration:1e3,hideEasing:"swing",onHidden:void 0,closeMethod:!1,closeDuration:!1,closeEasing:!1,closeOnHover:!0,extendedTimeOut:1e3,iconClasses:{error:"toast-error",info:"toast-info",success:"toast-success",warning:"toast-warning"},iconClass:"toast-info",positionClass:"toast-top-right",timeOut:5e3,titleClass:"toast-title",messageClass:"toast-message",escapeHtml:!1,target:"body",closeHtml:'<button type="button">&times;</button>',closeClass:"toast-close-button",newestOnTop:!0,preventDuplicates:!1,progressBar:!1,progressClass:"toast-progress",rtl:!1}}function f(e){C&&C(e)}function g(t){function o(e){return null==e&&(e=""),e.replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/'/g,"&#39;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}function s(){c(),u(),d(),p(),g(),C(),l(),i()}function i(){var e="";switch(t.iconClass){case"toast-success":case"toast-info":e="polite";break;default:e="assertive"}I.attr("aria-live",e)}function a(){E.closeOnHover&&I.hover(H,D),!E.onclick&&E.tapToDismiss&&I.click(b),E.closeButton&&j&&j.click(function(e){e.stopPropagation?e.stopPropagation():void 0!==e.cancelBubble&&e.cancelBubble!==!0&&(e.cancelBubble=!0),E.onCloseClick&&E.onCloseClick(e),b(!0)}),E.onclick&&I.click(function(e){E.onclick(e),b()})}function r(){I.hide(),I[E.showMethod]({duration:E.showDuration,easing:E.showEasing,complete:E.onShown}),E.timeOut>0&&(k=setTimeout(b,E.timeOut),F.maxHideTime=parseFloat(E.timeOut),F.hideEta=(new Date).getTime()+F.maxHideTime,E.progressBar&&(F.intervalId=setInterval(x,10)))}function c(){t.iconClass&&I.addClass(E.toastClass).addClass(y)}function l(){E.newestOnTop?v.prepend(I):v.append(I)}function u(){if(t.title){var e=t.title;E.escapeHtml&&(e=o(t.title)),M.append(e).addClass(E.titleClass),I.append(M)}}function d(){if(t.message){var e=t.message;E.escapeHtml&&(e=o(t.message)),B.append(e).addClass(E.messageClass),I.append(B)}}function p(){E.closeButton&&(j.addClass(E.closeClass).attr("role","button"),I.prepend(j))}function g(){E.progressBar&&(q.addClass(E.progressClass),I.prepend(q))}function C(){E.rtl&&I.addClass("rtl")}function O(e,t){if(e.preventDuplicates){if(t.message===w)return!0;w=t.message}return!1}function b(t){var n=t&&E.closeMethod!==!1?E.closeMethod:E.hideMethod,o=t&&E.closeDuration!==!1?E.closeDuration:E.hideDuration,s=t&&E.closeEasing!==!1?E.closeEasing:E.hideEasing;if(!e(":focus",I).length||t)return clearTimeout(F.intervalId),I[n]({duration:o,easing:s,complete:function(){h(I),clearTimeout(k),E.onHidden&&"hidden"!==P.state&&E.onHidden(),P.state="hidden",P.endTime=new Date,f(P)}})}function D(){(E.timeOut>0||E.extendedTimeOut>0)&&(k=setTimeout(b,E.extendedTimeOut),F.maxHideTime=parseFloat(E.extendedTimeOut),F.hideEta=(new Date).getTime()+F.maxHideTime)}function H(){clearTimeout(k),F.hideEta=0,I.stop(!0,!0)[E.showMethod]({duration:E.showDuration,easing:E.showEasing})}function x(){var e=(F.hideEta-(new Date).getTime())/F.maxHideTime*100;q.width(e+"%")}var E=m(),y=t.iconClass||E.iconClass;if("undefined"!=typeof t.optionsOverride&&(E=e.extend(E,t.optionsOverride),y=t.optionsOverride.iconClass||y),!O(E,t)){T++,v=n(E,!0);var k=null,I=e("<div/>"),M=e("<div/>"),B=e("<div/>"),q=e("<div/>"),j=e(E.closeHtml),F={intervalId:null,hideEta:null,maxHideTime:null},P={toastId:T,state:"visible",startTime:new Date,options:E,map:t};return s(),r(),a(),f(P),E.debug&&console&&console.log(P),I}}function m(){return e.extend({},p(),b.options)}function h(e){v||(v=n()),e.is(":visible")||(e.remove(),e=null,0===v.children().length&&(v.remove(),w=void 0))}var v,C,w,T=0,O={error:"error",info:"info",success:"success",warning:"warning"},b={clear:r,remove:c,error:t,getContainer:n,info:o,options:{},subscribe:s,success:i,version:"2.1.3",warning:a};return b}()})}("function"==typeof define&&define.amd?define:function(e,t){"undefined"!=typeof module&&module.exports?module.exports=t(require("jquery")):window.toastr=t(window.jQuery)});
+
+
+    if('{{message}}'){
+
+    
+    $(document).ready(function() {
+        
+        toastr.options.timeOut = 800;
+        toastr.success('{{message}}');
+    });
+
+}
+
+    // window.location="{{location}}"
+  
+    
+</script> -->
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,1608 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>BookMyShoot</title>
+    <!-- google-fonts -->
+    <link href="//fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="//fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- //google-fonts -->
+    <!-- Template CSS Style link -->
+    <link rel="stylesheet" href="/static/latest/assets/css/style-starter.css">
+</head>
+
+<body>
+    <!--header-->
+    <header id="site-header" class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg stroke">
+                <h1>
+                    <a class="navbar-brand" href="index.html">
+                        BookMy<i class="fas fa-camera"></i>Shoot
+                    </a>
+                </h1>
+                <!-- if logo is image enable this   
+    <a class="navbar-brand" href="#index.html">
+        <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+    </a> -->
+                <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+                    data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav mx-lg-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#gallery">Works</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="#service">Latest Services</a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#register">Register</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li> -->
+                    </ul>
+                </div>
+                <!-- search button -->
+                <div class="search-right ml-lg-3">
+                    <div class="search-container">
+                        <form action="/#gallery" method="post">
+                            <input class="search expandright" id="searchright" type="search" name="q"
+                                placeholder="Search">
+                            <label class="button searchbutton" for="searchright"><i class="fas fa-search"></i></label>
+                        </form>
+                    </div>
+                </div>
+                <!-- //search button -->
+                <!-- toggle switch for light and dark theme -->
+                <div class="cont-ser-position">
+                    <nav class="navigation">
+                        <div class="theme-switch-wrapper">
+                            <label class="theme-switch" for="checkbox">
+                                <input type="checkbox" id="checkbox">
+                                <div class="mode-container">
+                                    <i class="gg-sun"></i>
+                                    <i class="gg-moon"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </nav>
+                </div>
+                <!-- //toggle switch for light and dark theme -->
+            </nav>
+        </div>
+    </header>
+    <!--//header-->
+
+    <!-- banner section -->
+    <div class="slider-container" id="home">
+        <div class="left-slide">
+            <div style="background: url('/static/latest/assets/images/leftbg.jpg');background-size: cover;">
+                <h3 class="mt-5 mb-3">STREAM ADS</h3>
+                <h4>WEDDING CINEMAS</h4>
+                <p class="mt-4">BOOK YOUR SHOOT NOW</p>
+                <!--<a href="#home" class="btn btn-style mt-5">Explore</a>-->
+            </div>
+        </div>
+        <style>
+
+            .right-slide{
+                filter: grayscale(.9);
+           
+                transition: all .5s;
+            }
+            .right-slide:hover{
+                filter: none;
+            }
+
+        </style>
+        <div class="right-slide" >
+            <div class="bg-image1" style="padding-top: 300px;filter: none !important; ">
+                <div class="formbg-outer" >
+                    <div class="formbg">
+                      <div  class="formbg-inner padding-horizontal--48">
+                        <span class="padding-bottom--15">Sign in to your account</span>
+                        <form id="stripe-login" method="post">
+                        {% csrf_token %}
+                        
+                          <div class="field padding-bottom--24">
+                            <label for="email">Username</label>
+                            <input required  type="text" name="uname">
+                            <!-- <span id="unamespan">Incorrect email format!</span> -->
+                          </div>
+                          <div style="margin-top: -25px;" class="field padding-bottom--24">
+                            <div class="grid--50-50">
+                              <label for="password">Password</label>
+                             
+                            </div>
+                            <input  required id="password" type="password" name="pass">
+                            <!-- <span id="passspan">Password Must contain <br> 8 charactor, 1 lowercase, 1 uppercase, 1 number!</span> -->
+                          </div>
+                          <div class="field field-checkbox padding-bottom--24 flex-flex align-center">
+                            <!-- <label for="checkbox">
+                              <input type="checkbox" name="checkbox"> Stay signed in for a week
+                            </label> -->
+                          </div>
+                          <div style="margin-top: -20px;" class="field padding-bottom--24">
+                            <input style="background: #fa4046;border: 2px solid white !important;outline: 2px solid white;" id="btn" type="submit" name="login" value="Continue">
+                            <a class="ssolink" style="font-size: .7em; color: #1a1f36;" href="forgot">Forgot Password</a>  
+                        </div>
+                          <div class="field">
+                            <a class="ssolink" style="font-size: .7em; color: #1a1f36;" href="#register">New to here? Register</a>
+                            
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                    <div class="footer-link padding-top--24">
+                      <!-- <span>Don't have an account? <a href="">Sign up</a></span> -->
+                      <!-- <div class="listing padding-top--24 padding-bottom--24 flex-flex center-center">
+                        <span><a href="#">© Stackfindover</a></span>
+                        <span><a href="#">Contact</a></span>
+                        <span><a href="#">Privacy & terms</a></span>
+                      </div> -->
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="slider-container" id="about">
+        <div class="left-slide">
+            <div style="background: url('/static/latest/assets/images/left2.jpg');background-size: cover;">
+                <!-- <h3 class="mt-5 mb-3">Best Photo Studio</h3>
+                <h4>A high quality photography</h4>
+                <p class="mt-4">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo.</p>
+                <a href="#login" class="btn btn-style mt-5">Explore</a> -->
+            </div>
+        </div>
+        <div class="right-slide">
+            <div style="margin-left: 30px;">
+              <br><br><br><br><br><br>
+              <h3>About Us</h3>
+              <p class="lead mt-2">We are a team of passionate and creative professionals who specialize in capturing the most precious moments of your life. We understand the importance of your special day and strive to provide you with the highest quality wedding cinematography and photography services.</p>
+
+              <p class="lead mt-2">Our team of experts has years of experience in the industry and is well-equipped with the latest technology and equipment to deliver breathtakingly beautiful wedding films and photographs. We are committed to providing a personalized and customized experience to each of our clients, ensuring that every detail of your special day is captured perfectly.</p>
+                
+              <p class="lead mt-2">At Stream Ads, we believe that each wedding is unique and special, and we make sure that every film and photograph we create reflects this. We take great pride in our ability to create stunning and timeless wedding films and photographs that you will cherish for a lifetime.</p>
+                
+              <p class="lead mt-2">Our services include pre-wedding shoots, wedding cinematography, photography, and post-production editing. We also offer a range of packages to suit your individual needs and budget.</p>
+                
+              <p class="lead mt-2">Our team is dedicated to providing you with exceptional customer service, and we are always available to answer any questions or concerns you may have. We understand that planning a wedding can be overwhelming, and we are here to make the process as easy and stress-free as possible.</p>
+                
+              <p class="lead mt-2"> Thank you for considering Stream Ads Wedding Cinemas and Photography for your special day. We look forward to capturing your most precious memories and creating a beautiful and timeless film and photograph collection that you will cherish for years to come.</p>
+            </div>
+        </div>
+    </div>
+    <!-- //banner section -->
+
+    <!-- gallery section -->
+    <section class="w3l-gallery py-5" id="gallery">
+        <div class="container py-md-5 py-4">
+            <div class="title-heading-w3 text-center mx-auto mb-sm-5 mb-4" style="max-width:700px">
+                <h3 class="title-style">Gallery</h3>
+                <p class="lead mt-2">Works based on Categories.</p>
+            </div>
+            <div class="row">
+
+            {% for i in view3 %}
+                <div class="col-md-4 col-sm-6 mt-4" >
+                    <div class=" item">
+                        <a 
+                            class="zoom d-block">
+                            <img class="card-img-bottom d-block" style="width: 400px;height: 240px;" src="/static/media/{{i.image}}" alt="Card image cap">
+                            <span class="overlay__hover"></span>
+                            <span class="hover-content">
+                                <span class="title">{{ i.category }}</span>
+                                <button style="font-size: 12px;padding: 3px 5px;border: none;" onclick="goCat('{{ i.category_id }}')">View Services </button>
+                                <!-- <a style="width: 100px !important;" href="/publicviewmyworks/{{service.service_id}}">View Works</a><br> -->
+                                <button style="font-size: 12px;padding: 3px 5px;border: none;" onclick="goLog('{{ i.category_id }}')">View Works</button> 
+                                <span class="content"></span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+
+                <script>
+
+                    function goCat(id){
+                        // console.log(id)
+                        location.href=`/publicviewservice/${id}`
+                    }
+                    function goLog(id){
+                        // console.log(id)
+                        location.href=`/publicviewmyworks/${id}`
+                    }
+
+
+
+                </script>
+
+                  
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //gallery section -->
+
+    <!-- stats -->
+    <section class="w3-stats pb-5" id="stats">
+        <div class="container pb-md-5 pb-4">
+            <div class="row text-center pt-lg-4">
+                <div class="col-md-4 col-6">
+                    <div class="counter">
+                        <i class="far fa-smile-beam"></i>
+                        <div class="timer count-title count-number mt-3" data-to="{{ user }}" data-speed="500"></div>
+                        <p class="count-text">Customers</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="counter">
+                        <i class="fas fa-photo-video"></i>
+                        <div class="timer count-title count-number mt-3" data-to="{{ completed }}" data-speed="100"></div>
+                        <p class="count-text">Work completed</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6 mt-md-0 mt-5">
+                    <div class="counter">
+                        <i class="fas fa-camera-retro"></i>
+                        <div class="timer count-title count-number mt-3" data-to="10" data-speed="1500"></div>
+                        <p class="count-text">Years of Experience</p>
+                    </div>
+                </div>
+                <!-- <div class="col-md-3 col-6 mt-md-0 mt-5">
+                    <div class="counter">
+                        <i class="fas fa-medal"></i>
+                        <div class="timer count-title count-number mt-3" data-to="7630" data-speed="1500"></div>
+                        <p class="count-text">Awards Won</p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+    <!-- //stats -->
+
+    <!-- progress & faq section -->
+    <!-- <section class="w3l-progress py-5" id="progress">
+        <div class="container py-md-5 py-4">
+            <div class="title-heading-w3 text-center mx-auto mb-sm-5 mb-4" style="max-width:700px">
+                <h3 class="title-style">Frequently Asked Questions</h3>
+                <p class="lead mt-2">Nostrud exercitation ullamco laboris nisi
+                    ut aliquip ex ea commodo consequat sunt in culpa qui official.</p>
+            </div>
+            <div class="row pt-2">
+                <div class="col-lg-6 w3l-faq">
+                    <div class="faq-page">
+                        <ul>
+                            <li>
+                                <input type="checkbox" checked>
+                                <i></i>
+                                <h2>How would you describe your photography?</h2>
+                                <p>It's really, really good. <br>Amet earum velit nobis aliquam
+                                    laboriosam nihil debitis facere voluptatibus consectetur quae quasi fuga, ad
+                                    corrupti libero omnis sapiente
+                                    non assumenda, incidunt officiis eaque iste minima autem.</p>
+                            </li>
+                            <li>
+                                <input type="checkbox" checked>
+                                <i></i>
+                                <h2>What kind of photography equipment do you use?</h2>
+                                <p>I use the best equipment in the world.<br>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates amet earum
+                                    velit nobis aliquam
+                                    laboriosam nihil quasi fuga, ad corrupti libero omnis sapiente
+                                    non assumenda excepturi. Tempore
+                                    reiciendis ipsam culpa, qui
+                                    voluptates eveniet, incidunt officiis eaque iste minima autem.</p>
+                            </li>
+                            <li>
+                                <input type="checkbox" checked>
+                                <i></i>
+                                <h2>Are you a successful photographer?</h2>
+                                <p>I'm sure that by almost any measure most folks would consider me a successful
+                                    photographer. <br> Sit amet consectetur adipisicing elit. Voluptates amet earum
+                                    velit
+                                    nobis aliquam
+                                    laboriosam nihil debitis animi. Tempore reiciendis
+                                    ipsam culpa, qui
+                                    voluptates eveniet, incidunt officiis eaque iste minima autem.</p>
+                            </li>
+
+                            <li>
+                                <input type="checkbox" checked>
+                                <i></i>
+                                <h2>How much do you charge?</h2>
+                                <p>All my pricing is available online. <br>Sit amet consectetur adipisicing elit.
+                                    Voluptates amet earum
+                                    velit nobis aliquam
+                                    laboriosam nihil debitis facere voluptatibus consectetur quae quasi fuga, ad
+                                    corrupti libero omnis sapiente
+                                    non assumenda excepturi aperiam iste minima autem.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-lg-0 mt-5 pl-lg-5">
+                    <div class="progress-info info1">
+                        <h6 class="progress-tittle">Photography <span class="">80%</span></h6>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped gradient-1" role="progressbar"
+                                style="width: 80%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-info info2">
+                        <h6 class="progress-tittle">Creativity <span class="">95%</span>
+                        </h6>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped gradient-2" role="progressbar"
+                                style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-info info3">
+                        <h6 class="progress-tittle">Retouching <span class="">60%</span></h6>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped gradient-3" role="progressbar"
+                                style="width: 60%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-info info4 mb-0">
+                        <h6 class="progress-tittle">New Stills <span class="">85%</span></h6>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped gradient-4" role="progressbar"
+                                style="width: 85%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- //progress & faq section -->
+
+    <!-- testimonial section -->
+    <!-- <section id="testimonial-area" class="pt-5">
+        <div class="container pt-md-5 pt-4">
+            <div class="title-heading-w3 text-center mx-auto mb-sm-5 mb-4" style="max-width:700px">
+                <h3 class="title-style">Testimonials</h3>
+                <p class="lead mt-2">Nostrud exercitation ullamco laboris nisi
+                    ut aliquip ex ea commodo consequat sunt in culpa qui official.</p>
+            </div>
+            <div class="testi-wrap">
+                <div class="client-single active position-1" data-position="position-1">
+                    <div class="client-img">
+                        <img src="/static/latest/assets/images/testi4.jpg" alt="" />
+                    </div>
+                    <div class="client-info">
+                        <h3>Theo Hall</h3>
+                        <p>Subtitle goes here</p>
+                    </div>
+                    <div class="client-comment">
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. </h3>
+                        <img src="/static/latest/assets/images/quote.png" alt="" />
+                    </div>
+                </div>
+
+                <div class="client-single inactive position-2" data-position="position-2">
+                    <div class="client-img">
+                        <img src="/static/latest/assets/images/testi2.jpg" alt="" />
+                    </div>
+                    <div class="client-info">
+                        <h3>Olive Yew</h3>
+                        <p>Subtitle goes here</p>
+                    </div>
+                    <div class="client-comment">
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. </h3>
+                        <img src="/static/latest/assets/images/quote.png" alt="" />
+                    </div>
+                </div>
+
+                <div class="client-single inactive position-3" data-position="position-3">
+                    <div class="client-img">
+                        <img src="/static/latest/assets/images/testi1.jpg" alt="" />
+                    </div>
+                    <div class="client-info">
+                        <h3>Maya Didas</h3>
+                        <p>Subtitle goes here</p>
+                    </div>
+                    <div class="client-comment">
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. </h3>
+                        <img src="/static/latest/assets/images/quote.png" alt="" />
+                    </div>
+                </div>
+
+                <div class="client-single inactive position-4" data-position="position-4">
+                    <div class="client-img">
+                        <img src="/static/latest/assets/images/testi3.jpg" alt="" />
+                    </div>
+                    <div class="client-info">
+                        <h3>Brock Lee</h3>
+                        <p>Subtitle goes here</p>
+                    </div>
+                    <div class="client-comment">
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. </h3>
+                        <img src="/static/latest/assets/images/quote.png" alt="" />
+                    </div>
+                </div>
+
+                <div class="client-single inactive position-5" data-position="position-5">
+                    <div class="client-img">
+                        <img src="/static/latest/assets/images/testi5.jpg" alt="" />
+                    </div>
+                    <div class="client-info">
+                        <h3>Shona Leer</h3>
+                        <p>Subtitle goes here</p>
+                    </div>
+                    <div class="client-comment">
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. </h3>
+                        <img src="/static/latest/assets/images/quote.png" alt="" />
+                    </div>
+                </div>
+
+                <div class="client-single inactive position-6" data-position="position-6">
+                    <div class="client-img">
+                        <img src="/static/latest/assets/images/testi6.jpg" alt="" />
+                    </div>
+                    <div class="client-info">
+                        <h3>Dennis Lson</h3>
+                        <p>Subtitle goes here</p>
+                    </div>
+                    <div class="client-comment">
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. </h3>
+                        <img src="/static/latest/assets/images/quote.png" alt="" />
+                    </div>
+                </div>
+
+                <div class="client-single inactive position-7" data-position="position-7">
+                    <div class="client-img">
+                        <img src="/static/latest/assets/images/testi7.jpg" alt="" />
+                    </div>
+                    <div class="client-info">
+                        <h3>Jenna John</h3>
+                        <p>Subtitle goes here</p>
+                    </div>
+                    <div class="client-comment">
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. </h3>
+                        <img src="/static/latest/assets/images/quote.png" alt="" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section> -->
+    <!-- //testimonial section -->
+
+    <!-- call section -->
+    <!-- <section class="w3l-call-to-action-6 text-center py-5" >
+        <div class="container py-md-4 py-3">
+            <div class="d-md-flex align-items-center justify-content-center">
+                <h3 class="title-big">Looking for <span>Quality Photography?</span></h3>
+                <a href="#contact" class="btn btn-style ml-md-3 mt-md-0 mt-4">Contact Us</a>
+            </div>
+        </div>
+    </section> -->
+
+   
+    <!-- //call section -->
+
+    <!-- blog section -->
+    <!-- <section class="w3l-grids-block-5 py-5" id="service">
+        <div class="container py-md-5 py-4">
+            <div class="title-heading-w3 text-center mx-auto mb-sm-5 mb-4" style="max-width:700px">
+                <h3 class="title-style">Our Latest Works</h3>
+                <p class="lead mt-2">Last Month Work.</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="blog-card-single">
+                        <div class="grids5-info">
+                            <a href="#blog"><img src="/static/latest/assets/images/blog1.jpg" alt="" /></a>
+                            <div class="blog-info">
+                                <div class="d-flex align-items-center justify-content-between ">
+                                    <a class="d-flex align-items-center" href="#blog" title="23k followers">
+                                        <img class="img-fluid" src="/static/latest/assets/images/testi2.jpg" alt="admin"
+                                            style="max-width:40px"> <span class="small ml-2">Eetey Cruis</span>
+                                    </a>
+                                    <p class="date-text"><i class="far fa-calendar-alt mr-1"></i>April 06, 2021</p>
+                                </div>
+                                <h5 class="color-1"><a href="#blog">Photography</a></h5>
+                                <h4><a href="#blog">You Should Fall In Love With Photography</a>
+                                </h4>
+                                <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, sunt inc
+                                    officia deserunt.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mt-md-0 mt-5">
+                    <div class="blog-card-single">
+                        <div class="grids5-info">
+                            <a href="#blog"><img src="/static/latest/assets/images/blog2.jpg" alt="" /></a>
+                            <div class="blog-info">
+                                <div class="d-flex align-items-center justify-content-between ">
+                                    <a class="d-flex align-items-center" href="#blog" title="23k followers">
+                                        <img class="img-fluid" src="/static/latest/assets/images/testi1.jpg" alt="admin"
+                                            style="max-width:40px"> <span class="small ml-2">Molive Joe</span>
+                                    </a>
+                                    <p class="date-text"><i class="far fa-calendar-alt mr-1"></i>April 13, 2021</p>
+                                </div>
+                                <h5 class="color-2"><a href="#blog">Camera</a></h5>
+                                <h4><a href="#blog">Your Camera Manual Portrait Photography</a></h4>
+                                <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, sunt inc
+                                    officia deserunt.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mt-lg-0 mt-5">
+                    <div class="blog-card-single">
+                        <div class="grids5-info">
+                            <a href="#blog"><img src="/static/latest/assets/images/blog3.jpg" alt="" /></a>
+                            <div class="blog-info">
+                                <div class="d-flex align-items-center justify-content-between ">
+                                    <a class="d-flex align-items-center" href="#blog" title="23k followers">
+                                        <img class="img-fluid" src="/static/latest/assets/images/testi3.jpg" alt="admin"
+                                            style="max-width:40px"> <span class="small ml-2">Turne Leo
+                                        </span>
+                                    </a>
+                                    <p class="date-text"><i class="far fa-calendar-alt mr-1"></i>April 12, 2021</p>
+                                </div>
+                                <h5 class="color-3"><a href="#blog">Photo Gallery</a></h5>
+                                <h4><a href="#blog">The Best Professional Travel Photos</a></h4>
+                                <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, sunt inc
+                                    officia deserunt.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+
+    <!-- <section class="w3l-grids-block-5 py-5" id="login">
+        <div class="container py-md-5 py-4">
+           
+
+  <div class="login-root" >
+    <div class="box-root flex-flex flex-direction--column" style="min-height: 60vh;flex-grow: 1;">
+      
+      
+  <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;"> -->
+      <!-- <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;background: url('/static/images/piza10.jpg') !important;background-size: cover !important;">
+        <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
+          <h1><a style="color: #ffffff;" href="http://blog.stackfindover.com/" rel="dofollow">Piza Hub</a></h1>
+        </div>
+        <div class="formbg-outer" >
+          <div class="formbg">
+            <div class="formbg-inner padding-horizontal--48">
+              <span class="padding-bottom--15">Sign in to your account</span>
+              <form id="stripe-login" method="post">
+                <div class="field padding-bottom--24">
+                  <label for="email">Username</label>
+                  <input required  type="text" name="uname"> -->
+                  <!-- <span id="unamespan">Incorrect email format!</span> -->
+                <!-- </div>
+                <div style="margin-top: -25px;" class="field padding-bottom--24">
+                  <div class="grid--50-50">
+                    <label for="password">Password</label>
+                   
+                  </div>
+                  <input  required id="password" type="password" name="pass"> -->
+                  <!-- <span id="passspan">Password Must contain <br> 8 charactor, 1 lowercase, 1 uppercase, 1 number!</span> -->
+                <!-- </div>
+                <div class="field field-checkbox padding-bottom--24 flex-flex align-center"> -->
+                  <!-- <label for="checkbox">
+                    <input type="checkbox" name="checkbox"> Stay signed in for a week
+                  </label> -->
+                <!-- </div>
+                <div style="margin-top: -20px;" class="field padding-bottom--24">
+                  <input style="background: #fa4046;border: 2px solid white !important;outline: 2px solid white;" id="btn" type="submit" name="login" value="Continue">
+                </div>
+                <div class="field">
+                  <a class="ssolink" style="font-size: .7em; color: #1a1f36;" href="#register">New to here? Register</a>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="footer-link padding-top--24"> -->
+            <!-- <span>Don't have an account? <a href="">Sign up</a></span> -->
+            <!-- <div class="listing padding-top--24 padding-bottom--24 flex-flex center-center">
+              <span><a href="#">© Stackfindover</a></span>
+              <span><a href="#">Contact</a></span>
+              <span><a href="#">Privacy & terms</a></span>
+            </div> -->
+          <!-- </div>
+        </div> -->
+
+
+        
+  <style>
+
+
+
+#unamespan{
+  /* background: red; */
+  /* padding-left: 10px; */
+  color: red;
+
+  font-size: .8em;
+}
+#passspan{
+  /* background: red; */
+  /* padding-left: 10px; */
+  color: red;
+
+  font-size: .8em;
+}
+body {
+    min-height: 100%;
+    background-color: #ffffff;
+}
+h1 {
+    letter-spacing: -1px;
+}
+a {
+  color: #5469d4;
+  text-decoration: unset;
+}
+.login-root {
+    background: #fff;
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+.loginbackground {
+    min-height: 692px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 0;
+    overflow: hidden;
+}
+.flex-flex {
+    display: flex;
+}
+.align-center {
+  align-items: center; 
+}
+.center-center {
+  align-items: center;
+  justify-content: center;
+}
+.box-root {
+    box-sizing: border-box;
+}
+.flex-direction--column {
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+
+/* .loginbackground-gridContainer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: [start] 1fr [left-gutter] (86.6px)[16] [left-gutter] 1fr [end];
+    grid-template-columns: [start] 1fr [left-gutter] repeat(16,86.6px) [left-gutter] 1fr [end];
+    -ms-grid-rows: [top] 1fr [top-gutter] (64px)[8] [bottom-gutter] 1fr [bottom];
+    grid-template-rows: [top] 1fr [top-gutter] repeat(8,64px) [bottom-gutter] 1fr [bottom];
+    justify-content: center;
+    margin: 0 -2%;
+    transform: rotate(-12deg) skew(-12deg);
+} */
+
+
+.box-divider--light-all-2 {
+    box-shadow: inset 0 0 0 2px #e3e8ee;
+}
+.box-background--blue {
+    background-color: #e7272d;
+}
+.box-background--white {
+  background-color: #ffffff; 
+}
+.box-background--blue800 {
+    background-color: #e7272d;
+}
+.box-background--gray100 {
+    background-color: #e3e8ee;
+}
+.box-background--cyan200 {
+    background-color: #7fd3ed;
+}
+.padding-top--64 {
+  padding-top: 64px;
+}
+.padding-top--24 {
+  padding-top: 24px;
+}
+.padding-top--48 {
+  padding-top: 48px;
+}
+.padding-bottom--24 {
+  padding-bottom: 24px;
+}
+.padding-horizontal--48 {
+  padding: 48px;
+}
+.padding-bottom--15 {
+  padding-bottom: 15px;
+}
+
+
+.flex-justifyContent--center {
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.formbg {
+    margin: 0px auto;
+    width: 100%;
+    max-width: 448px;
+    background: white;
+    border-radius: 4px;
+    box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+}
+span {
+    display: block;
+    font-size: 20px;
+    line-height: 28px;
+    color: #1a1f36;
+}
+label {
+    margin-bottom: 10px;
+}
+.reset-pass a,label {
+    font-size: 14px;
+    font-weight: 600;
+    display: block;
+}
+.reset-pass > a {
+    text-align: right;
+    margin-bottom: 10px;
+}
+.grid--50-50 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+}
+
+.field input {
+    font-size: 16px;
+    line-height: 28px;
+    padding: 8px 16px;
+    width: 100%;
+    min-height: 44px;
+    border: unset;
+    border-radius: 4px;
+    outline-color: rgb(84 105 212 / 0.5);
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(60, 66, 87, 0.16) 0px 0px 0px 1px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+}
+
+input[type="submit"] {
+    background-color: rgb(84, 105, 212);
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0.12) 0px 1px 1px 0px, 
+                rgb(84, 105, 212) 0px 0px 0px 1px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                rgba(60, 66, 87, 0.08) 0px 2px 5px 0px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+.field-checkbox input {
+    width: 20px;
+    height: 15px;
+    margin-right: 5px; 
+    box-shadow: unset;
+    min-height: unset;
+}
+.field-checkbox label {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+a.ssolink {
+    display: block;
+    text-align: center;
+    font-weight: 600;
+}
+.footer-link span {
+    font-size: 14px;
+    text-align: center;
+}
+.listing a {
+    color: #697386;
+    font-weight: 600;
+    margin: 0 10px;
+}
+
+.animationRightLeft {
+  animation: animationRightLeft 2s ease-in-out infinite;
+}
+.animationLeftRight {
+  animation: animationLeftRight 2s ease-in-out infinite;
+}
+.tans3s {
+  animation: animationLeftRight 3s ease-in-out infinite;
+}
+.tans4s {
+  animation: animationLeftRight 4s ease-in-out infinite;
+}
+
+@keyframes animationLeftRight {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(1000px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+} 
+
+@keyframes animationRightLeft {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(-1000px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+} 
+
+
+.reg-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .7rem;
+    padding: 1rem 1rem ;
+   
+    margin-top: .2rem;
+    /* background: #f2f2f2; */
+  }
+  
+  #reg{
+  
+    width: 60%;
+    min-height: 60vh;
+    margin: 2rem auto;
+   
+    box-shadow: 10px 10px 8px lightgrey ,-5px -5px 8px lightgrey ;
+  }
+
+  .form-control{
+    /* background: rebeccapurple !important; */
+    padding: .5rem 1rem !important;
+  }
+  
+  .reg-container > div{
+    /* background: green; */
+    width: 45% !important;
+    
+  }
+  
+  .reg-container > div input{
+    padding: 25px 5px;
+    border-radius: 0% !important;
+  }
+  
+  #reg-btn{
+    background: #e7272d;
+    border: 2px solid #fff;
+    outline: 2px solid #fff;
+    padding: .8rem 3rem;
+  }
+
+  
+  </style>
+        <!-- </div>
+    </section> -->
+   
+   
+    <section class="w3l-grids-block-5 py-5" id="register">
+        <div class="container py-md-5 py-4">
+           
+<center>
+  <div style="background: url('/static/images/piza10.jpg') !important;background-size: cover !important;z-index: 10000;padding: 2rem 0px;">
+       <form style="position: relative;top: 0rem;background: #fff;" id="reg" action="" method="post">
+       {% csrf_token %}
+       <h1 class="p-3">Registration</h1>
+   
+      
+       <div class="reg-container">
+               <div>
+                   <input type="text" class="form-control" required placeholder="First name" name="fname" id="">
+               </div>
+               <div>
+                   <input type="text" class="form-control" required placeholder="Last Name" name="lname" id="">
+               </div>
+       </div>
+       <div class="reg-container">
+               <div>
+                   <input type="emal" style="width: 615px;margin-left: -158px;" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required placeholder="Email" name="email" id="">
+               </div>
+             
+       </div>
+       
+       <div class="reg-container">
+               <div>
+                   <input type="text" class="form-control" required placeholder="Place"  name="place" id="">
+               </div>
+               <div>
+                   <input type="text" class="form-control" required placeholder="Phone" maxlength="10" name="phone" id="">
+               </div>
+       </div>
+       <div class="reg-container">
+        <div>
+            <input type="text" class="form-control" required placeholder="Username" name="uname" id="uname">
+        </div>
+         
+        <div>
+            <input type="password" class="form-control" required placeholder="Password" name="pass" id="pass">
+        </div>
+</div>
+       
+       <div class="reg-container">
+           <input id="reg-btn" type="submit" name="register" >
+       </div>
+       <div>
+        <a href="#home">Already have an account? Login</a>
+       </div>
+       </form>
+  </div>
+</center>
+
+<style>
+   * {
+ padding: 0;
+ margin: 0;
+ color: #1a1f36;
+ box-sizing: border-box;
+ word-wrap: break-word;
+ font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Ubuntu,sans-serif;
+}
+
+#unamespan{
+ /* background: red; */
+ /* padding-left: 10px; */
+ color: red;
+
+ font-size: .8em;
+}
+#passspan{
+ /* background: red; */
+ /* padding-left: 10px; */
+ color: red;
+
+ font-size: .8em;
+}
+body {
+   min-height: 100%;
+   background-color: #ffffff;
+}
+h1 {
+   letter-spacing: -1px;
+}
+a {
+ color: #5469d4;
+ text-decoration: unset;
+}
+.login-root {
+   background: #fff;
+   display: flex;
+   width: 100%;
+   min-height: 100vh;
+   overflow: hidden;
+}
+.loginbackground {
+   min-height: 692px;
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   top: 0;
+   z-index: 0;
+   overflow: hidden;
+}
+.flex-flex {
+   display: flex;
+}
+.align-center {
+ align-items: center; 
+}
+.center-center {
+ align-items: center;
+ justify-content: center;
+}
+.box-root {
+   box-sizing: border-box;
+}
+.flex-direction--column {
+   -ms-flex-direction: column;
+   flex-direction: column;
+}
+
+/* 
+.loginbackground-gridContainer {
+   display: -ms-grid;
+   display: grid;
+   -ms-grid-columns: [start] 1fr [left-gutter] (86.6px)[16] [left-gutter] 1fr [end];
+   grid-template-columns: [start] 1fr [left-gutter] repeat(16,86.6px) [left-gutter] 1fr [end];
+   -ms-grid-rows: [top] 1fr [top-gutter] (64px)[8] [bottom-gutter] 1fr [bottom];
+   grid-template-rows: [top] 1fr [top-gutter] repeat(8,64px) [bottom-gutter] 1fr [bottom];
+   justify-content: center;
+   margin: 0 -2%;
+   transform: rotate(-12deg) skew(-12deg);
+} */
+
+
+.box-divider--light-all-2 {
+   box-shadow: inset 0 0 0 2px #e3e8ee;
+}
+.box-background--blue {
+   background-color: #e7272d;
+}
+.box-background--white {
+ background-color: #ffffff; 
+}
+.box-background--blue800 {
+   background-color: #e7272d;
+}
+.box-background--gray100 {
+   background-color: #e3e8ee;
+}
+.box-background--cyan200 {
+   background-color: #7fd3ed;
+}
+.padding-top--64 {
+ padding-top: 64px;
+}
+.padding-top--24 {
+ padding-top: 24px;
+}
+.padding-top--48 {
+ padding-top: 48px;
+}
+.padding-bottom--24 {
+ padding-bottom: 24px;
+}
+.padding-horizontal--48 {
+ padding: 48px;
+}
+.padding-bottom--15 {
+ padding-bottom: 15px;
+}
+
+
+.flex-justifyContent--center {
+ -ms-flex-pack: center;
+ justify-content: center;
+}
+
+.formbg {
+   margin: 0px auto;
+   width: 100%;
+   max-width: 448px;
+   background: #fff;
+   border-radius: 4px;
+   box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+}
+span {
+   display: block;
+   font-size: 20px;
+   line-height: 28px;
+   color: #1a1f36;
+}
+label {
+   margin-bottom: 10px;
+}
+.reset-pass a,label {
+   font-size: 14px;
+   font-weight: 600;
+   display: block;
+}
+.reset-pass > a {
+   text-align: right;
+   margin-bottom: 10px;
+}
+.grid--50-50 {
+   display: grid;
+   grid-template-columns: 50% 50%;
+   align-items: center;
+}
+
+.field input {
+   font-size: 16px;
+   line-height: 28px;
+   padding: 8px 16px;
+   width: 100%;
+   min-height: 44px;
+   border: unset;
+   border-radius: 4px;
+   outline-color: rgb(84 105 212 / 0.5);
+   background-color: rgb(255, 255, 255);
+   box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+               rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+               rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+               rgba(60, 66, 87, 0.16) 0px 0px 0px 1px, 
+               rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+               rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+               rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+}
+
+input[type="submit"] {
+   background-color: rgb(84, 105, 212);
+   box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+               rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+               rgba(0, 0, 0, 0.12) 0px 1px 1px 0px, 
+               rgb(84, 105, 212) 0px 0px 0px 1px, 
+               rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+               rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+               rgba(60, 66, 87, 0.08) 0px 2px 5px 0px;
+   color: #fff;
+   font-weight: 600;
+   cursor: pointer;
+}
+.field-checkbox input {
+   width: 20px;
+   height: 15px;
+   margin-right: 5px; 
+   box-shadow: unset;
+   min-height: unset;
+}
+.field-checkbox label {
+   display: flex;
+   align-items: center;
+   margin: 0;
+}
+a.ssolink {
+   display: block;
+   text-align: center;
+   font-weight: 600;
+}
+.footer-link span {
+   font-size: 14px;
+   text-align: center;
+}
+.listing a {
+   color: #697386;
+   font-weight: 600;
+   margin: 0 10px;
+}
+
+.animationRightLeft {
+ animation: animationRightLeft 2s ease-in-out infinite;
+}
+.animationLeftRight {
+ animation: animationLeftRight 2s ease-in-out infinite;
+}
+.tans3s {
+ animation: animationLeftRight 3s ease-in-out infinite;
+}
+.tans4s {
+ animation: animationLeftRight 4s ease-in-out infinite;
+}
+
+@keyframes animationLeftRight {
+ 0% {
+   transform: translateX(0px);
+ }
+ 50% {
+   transform: translateX(1000px);
+ }
+ 100% {
+   transform: translateX(0px);
+ }
+} 
+
+@keyframes animationRightLeft {
+ 0% {
+   transform: translateX(0px);
+ }
+ 50% {
+   transform: translateX(-1000px);
+ }
+ 100% {
+   transform: translateX(0px);
+ }
+} 
+ </style>
+        </div>
+    </section>
+
+    <!-- <section class="w3l-contact py-5" id="contact">
+      <div class="container py-lg-5 py-md-4 py-2">
+          <div class="title-heading-w3 text-center mx-auto mb-sm-5 mb-4" style="max-width:700px">
+              <h3 class="title-style">Contact Us</h3>
+              <p class="lead mt-2">STRAM ADS WEDDING CINEMAS</p>
+          </div>
+          <div class="mx-auto pt-lg-4 pt-md-5 pt-4" style="max-width:1000px">
+              <div class="row contact-block">
+                  <div class="col-md-5 contact-left">
+                      <h3 class="font-weight-bold mb-md-5 mb-4">Contact Details</h3>
+                      <div class="cont-details">
+                          <div class="d-flex contact-grid">
+                              <div class="cont-left text-center mr-3">
+                                  <span class="fa fa-globe icon-color"></span>
+                              </div>
+                              <div class="cont-right">
+                                  <h6>Company Address</h6>
+                                  <p>NEAR MINI CIVIL STATION THAMARASSERY,CALICUT,KERALA</p>
+                              </div>
+                          </div>
+                          <div class="d-flex contact-grid mt-4 pt-lg-2">
+                              <div class="cont-left text-center mr-3">
+                                  <span class="fa fa-phone icon-color"></span>
+                              </div>
+                              <div class="cont-right">
+                                  <h6>Call Us</h6>
+                                  <p><a href="tel:+1(21) 234 4567">+91 9846955747</a></p>
+                              </div>
+                          </div>
+                          <div class="d-flex contact-grid mt-4 pt-lg-2">
+                              <div class="cont-left text-center mr-3">
+                                  <span class="fa fa-envelope-open icon-color"></span>
+                              </div>
+                              <div class="cont-right">
+                                  <h6>Email Us</h6>
+                                  <p><a href="mailto:example@mail.com" class="mail">streamads999@gmail.com</a></p>
+                              </div>
+                          </div>
+                          <div class="d-flex contact-grid mt-4 pt-lg-2">
+                              <div class="cont-left text-center mr-3">
+                                  <span class="fa fa-headphones icon-color"></span>
+                              </div>
+                              <div class="cont-right">
+                                  <h6>Customer Support</h6>
+                                  <p><a href="mailto:info@support.com" class="mail">info@support.com</a></p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-7 contact-right mt-md-0 mt-4">
+                      <form action="https://sendmail.w3layouts.com/submitForm" method="post" class="signin-form">
+                          <div class="input-grids">
+                              <input type="text" name="w3lName" id="w3lName" placeholder="Your Name*"
+                                  class="contact-input" required="" />
+                              <input type="email" name="w3lSender" id="w3lSender" placeholder="Your Email*"
+                                  class="contact-input" required="" />
+                              <input type="text" name="w3lSubect" id="w3lSubect" placeholder="Subject*"
+                                  class="contact-input" required="" />
+                              <input type="text" name="w3lWebsite" id="w3lWebsite" placeholder="Website URL*"
+                                  class="contact-input" required="" />
+                          </div>
+                          <div class="form-input">
+                              <textarea name="w3lMessage" id="w3lMessage" placeholder="Type your message here*"
+                                  required=""></textarea>
+                          </div>
+                          <button class="btn btn-style btn-style-primary-2">Send Message</button>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section> -->
+
+
+    <!-- //blog section -->
+
+    <!-- footer -->
+    <footer class="w3l-footer-29-main">
+        <div class="footer-29-w3l py-5">
+            <div class="container pt-md-5 pt-4">
+                <div class="w3l-footer-text-style">
+                    <div class="footer-list-cont d-flex align-items-center justify-content-between mb-5">
+                        <h6 class="foot-sub-title">Contact Us</h6>
+                        <div class="main-social-footer-29">
+                            <a href="https://m.facebook.com/story.php?story_fbid=pfbid0EqvNLXZGrcaxSKTw8EPQyM9VFnfkQt5Lg7uzuuyKA5cqQF3MMtSCQbrKTch7A9eRl&id=100064537006374&mibextid=SDPelY" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://instagram.com/stream_ads_wedding_cinemas?igshid=YmMyMTA2M2Y=" class="instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://instagram.com/stream_ads_photo_hub?igshid=YmMyMTA2M2Y=" class="instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row footer-top-29 pt-lg-5 pt-sm-4">
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="address-grid">
+                            <h5>Stream Ads Wedding Cinemas <br>THAMARASSERY,CALICUT,KERALA</h5>
+                            <h5 class="mt-sm-5 mt-4">Everyday: <span> 7 AM - 8 PM</span></h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 mt-sm-0 mt-4">
+                        <div class="address-grid">
+                            <h5>Phone</h5>
+                            <h5 class="phone-number-text mt-2"><a href="tel:+1(21) 112 7368">9544489966</a></h5>
+                        </div>
+                        <div class="address-grid mt-sm-5 mt-4">
+                            <h5>E-mail</h5>
+                            <h5 class="email-cont-text mt-1"> <a href="mailto:photogenic@mail.com"
+                                    class="mail">streamads999@gmail.com</a></h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-5 footer-list-menu pl-lg-0 mt-lg-0 mt-sm-5 mt-4">
+                        <div class="address-grid">
+                            <h5 class="mb-4 pb-lg-2">Support Links</h5>
+                            <ul>
+                                <li><a href="#privacy">Privacy Policy</a></li>
+                                <li><a href="#terms"> Terms of Service</a></li>
+                                <li><a href="#">Contact us</a></li>
+                                <li><a href="#support"> Support</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="address-grid col-lg-4 col-md-6 col-sm-7 mt-lg-0 mt-sm-5 mt-4 w3l-footer-16-main">
+                        <!--<h5>Subscribe Here</h5>-->
+                        <!--<form action="#" class="subscribe d-flex mt-4 pt-lg-2 mb-4" method="post">
+                            <input type="email" name="email" placeholder="Email Address" required="">
+                            <button><span class="fa fa-paper-plane" aria-hidden="true"></span></button>
+                        </form>-->
+                        <!--<p>Subscribe to our mailing list and get updates to your email inbox.</p>-->
+                    </div>
+                </div>
+                <!-- copyright -->
+                <div class="w3l-copyright text-center mt-lg-5 mt-sm-4 pt-md-4 pt-3">
+                    <p class="copy-footer-29">©BookMyShoot<a
+                            href="https://w3layouts.com/" target="_blank"></a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- //footer -->
+
+
+    <script src="
+https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+    </script>
+<script>
+    $(function() {
+        $("input[name='fname']").on('input', function(e) {
+            $(this).val($(this).val().replace(/[^A-Za-z ]/g, ''));
+
+        });
+        $("input[name='lname']").on('input', function(e) {
+            $(this).val($(this).val().replace(/[^A-Za-z ]/g, ''));
+
+        });
+        // $("input[name='dob']").on('input', function(e) {
+        //     $(this).val($(this).val().replace(/[^0-9/]/g, ''));
+
+        // });
+        
+        $("input[name='phone']").on('input', function(e) {
+        	$(this).val($(this).val().replace(/[^0-9]/g, ''));
+            
+        });
+        $("input[name='pin']").on('input', function(e) {
+        	$(this).val($(this).val().replace(/[^0-9]/g, ''));
+            
+        });
+        $("input[name='email']").on('input', function(e) {
+              var re = /([A-Z0-9a-z_-][^@])+?@[^$#<>?]+?\.[\w]{1,}/.test(this.value);
+                if(!re) {
+                    $('#eerror').show();
+                } else {
+                    $('#eerror').hide();
+                }
+
+        });
+        $("input[name='address']").on('input', function(e) {
+            $(this).val($(this).val().replace(/[^A-Za-z0-9()/. ]/g, ''));
+
+        });
+        $("input[name='place']").on('input', function(e) {
+            $(this).val($(this).val().replace(/[^A-Za-z ]/g, ''));
+
+        });
+            
+        $("input[name='pwd']").on('input', function(e) {
+        	$(this).val($(this).val().replace(/[^0-9A-Za-z@/. ]/g, ''));
+            
+        });
+    });
+
+
+</script>
+
+
+    <!-- Js scripts -->
+    <!-- move top -->
+    <button onclick="topFunction()" id="movetop" title="Go to top">
+        <span class="fas fa-level-up-alt" aria-hidden="true"></span>
+    </button>
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("movetop").style.display = "block";
+            } else {
+                document.getElementById("movetop").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <!-- //move top -->
+
+    <!-- common jquery plugin -->
+    <script src="/static/latest/assets/js/jquery-3.3.1.min.js"></script>
+    <!-- //common jquery plugin -->
+
+    <!-- theme switch js (light and dark)-->
+    <script src="/static/latest/assets/js/theme-change.js"></script>
+    <!-- //theme switch js (light and dark)-->
+
+    <!-- libhtbox -->
+    <script src="/static/latest/assets/js/lightbox-plus-jquery.min.js"></script>
+    <!-- libhtbox -->
+
+    <!-- counter for stats -->
+    <script src="/static/latest/assets/js/counter.js"></script>
+    <!-- //counter for stats -->
+
+    <!-- testimonial script -->
+    <script>
+        $(document).ready(function () {
+
+            $('.client-single').on('click', function (event) {
+                event.preventDefault();
+
+                var active = $(this).hasClass('active');
+
+                var parent = $(this).parents('.testi-wrap');
+
+                if (!active) {
+                    var activeBlock = parent.find('.client-single.active');
+
+                    var currentPos = $(this).attr('data-position');
+
+                    var newPos = activeBlock.attr('data-position');
+
+                    activeBlock.removeClass('active').removeClass(newPos).addClass('inactive').addClass(
+                        currentPos);
+                    activeBlock.attr('data-position', currentPos);
+
+                    $(this).addClass('active').removeClass('inactive').removeClass(currentPos).addClass(
+                        newPos);
+                    $(this).attr('data-position', newPos);
+
+                }
+            });
+
+        }(jQuery));
+    </script>
+    <!-- //testimonial script -->
+
+    <!-- MENU-JS -->
+    <script>
+        $(window).on("scroll", function () {
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 80) {
+                $("#site-header").addClass("nav-fixed");
+            } else {
+                $("#site-header").removeClass("nav-fixed");
+            }
+        });
+
+        //Main navigation Active Class Add Remove
+        $(".navbar-toggler").on("click", function () {
+            $("header").toggleClass("active");
+        });
+        $(document).on("ready", function () {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+            $(window).on("resize", function () {
+                if ($(window).width() > 991) {
+                    $("header").removeClass("active");
+                }
+            });
+        });
+    </script>
+    <!-- //MENU-JS -->
+
+    <!-- disable body scroll which navbar is in active -->
+    <script>
+        $(function () {
+            $('.navbar-toggler').click(function () {
+                $('body').toggleClass('noscroll');
+            })
+        });
+    </script>
+    <!-- //disable body scroll which navbar is in active -->
+
+    <!--bootstrap-->
+    <script src="/static/latest/assets/js/bootstrap.min.js"></script>
+    <!-- //bootstrap-->
+    <!-- //Js scripts -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script> -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+
+    !function(e){e(["jquery"],function(e){return function(){function t(e,t,n){return g({type:O.error,iconClass:m().iconClasses.error,message:e,optionsOverride:n,title:t})}function n(t,n){return t||(t=m()),v=e("#"+t.containerId),v.length?v:(n&&(v=d(t)),v)}function o(e,t,n){return g({type:O.info,iconClass:m().iconClasses.info,message:e,optionsOverride:n,title:t})}function s(e){C=e}function i(e,t,n){return g({type:O.success,iconClass:m().iconClasses.success,message:e,optionsOverride:n,title:t})}function a(e,t,n){return g({type:O.warning,iconClass:m().iconClasses.warning,message:e,optionsOverride:n,title:t})}function r(e,t){var o=m();v||n(o),u(e,o,t)||l(o)}function c(t){var o=m();return v||n(o),t&&0===e(":focus",t).length?void h(t):void(v.children().length&&v.remove())}function l(t){for(var n=v.children(),o=n.length-1;o>=0;o--)u(e(n[o]),t)}function u(t,n,o){var s=!(!o||!o.force)&&o.force;return!(!t||!s&&0!==e(":focus",t).length)&&(t[n.hideMethod]({duration:n.hideDuration,easing:n.hideEasing,complete:function(){h(t)}}),!0)}function d(t){return v=e("<div/>").attr("id",t.containerId).addClass(t.positionClass),v.appendTo(e(t.target)),v}function p(){return{tapToDismiss:!0,toastClass:"toast",containerId:"toast-container",debug:!1,showMethod:"fadeIn",showDuration:300,showEasing:"swing",onShown:void 0,hideMethod:"fadeOut",hideDuration:1e3,hideEasing:"swing",onHidden:void 0,closeMethod:!1,closeDuration:!1,closeEasing:!1,closeOnHover:!0,extendedTimeOut:1e3,iconClasses:{error:"toast-error",info:"toast-info",success:"toast-success",warning:"toast-warning"},iconClass:"toast-info",positionClass:"toast-top-right",timeOut:5e3,titleClass:"toast-title",messageClass:"toast-message",escapeHtml:!1,target:"body",closeHtml:'<button type="button">&times;</button>',closeClass:"toast-close-button",newestOnTop:!0,preventDuplicates:!1,progressBar:!1,progressClass:"toast-progress",rtl:!1}}function f(e){C&&C(e)}function g(t){function o(e){return null==e&&(e=""),e.replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/'/g,"&#39;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}function s(){c(),u(),d(),p(),g(),C(),l(),i()}function i(){var e="";switch(t.iconClass){case"toast-success":case"toast-info":e="polite";break;default:e="assertive"}I.attr("aria-live",e)}function a(){E.closeOnHover&&I.hover(H,D),!E.onclick&&E.tapToDismiss&&I.click(b),E.closeButton&&j&&j.click(function(e){e.stopPropagation?e.stopPropagation():void 0!==e.cancelBubble&&e.cancelBubble!==!0&&(e.cancelBubble=!0),E.onCloseClick&&E.onCloseClick(e),b(!0)}),E.onclick&&I.click(function(e){E.onclick(e),b()})}function r(){I.hide(),I[E.showMethod]({duration:E.showDuration,easing:E.showEasing,complete:E.onShown}),E.timeOut>0&&(k=setTimeout(b,E.timeOut),F.maxHideTime=parseFloat(E.timeOut),F.hideEta=(new Date).getTime()+F.maxHideTime,E.progressBar&&(F.intervalId=setInterval(x,10)))}function c(){t.iconClass&&I.addClass(E.toastClass).addClass(y)}function l(){E.newestOnTop?v.prepend(I):v.append(I)}function u(){if(t.title){var e=t.title;E.escapeHtml&&(e=o(t.title)),M.append(e).addClass(E.titleClass),I.append(M)}}function d(){if(t.message){var e=t.message;E.escapeHtml&&(e=o(t.message)),B.append(e).addClass(E.messageClass),I.append(B)}}function p(){E.closeButton&&(j.addClass(E.closeClass).attr("role","button"),I.prepend(j))}function g(){E.progressBar&&(q.addClass(E.progressClass),I.prepend(q))}function C(){E.rtl&&I.addClass("rtl")}function O(e,t){if(e.preventDuplicates){if(t.message===w)return!0;w=t.message}return!1}function b(t){var n=t&&E.closeMethod!==!1?E.closeMethod:E.hideMethod,o=t&&E.closeDuration!==!1?E.closeDuration:E.hideDuration,s=t&&E.closeEasing!==!1?E.closeEasing:E.hideEasing;if(!e(":focus",I).length||t)return clearTimeout(F.intervalId),I[n]({duration:o,easing:s,complete:function(){h(I),clearTimeout(k),E.onHidden&&"hidden"!==P.state&&E.onHidden(),P.state="hidden",P.endTime=new Date,f(P)}})}function D(){(E.timeOut>0||E.extendedTimeOut>0)&&(k=setTimeout(b,E.extendedTimeOut),F.maxHideTime=parseFloat(E.extendedTimeOut),F.hideEta=(new Date).getTime()+F.maxHideTime)}function H(){clearTimeout(k),F.hideEta=0,I.stop(!0,!0)[E.showMethod]({duration:E.showDuration,easing:E.showEasing})}function x(){var e=(F.hideEta-(new Date).getTime())/F.maxHideTime*100;q.width(e+"%")}var E=m(),y=t.iconClass||E.iconClass;if("undefined"!=typeof t.optionsOverride&&(E=e.extend(E,t.optionsOverride),y=t.optionsOverride.iconClass||y),!O(E,t)){T++,v=n(E,!0);var k=null,I=e("<div/>"),M=e("<div/>"),B=e("<div/>"),q=e("<div/>"),j=e(E.closeHtml),F={intervalId:null,hideEta:null,maxHideTime:null},P={toastId:T,state:"visible",startTime:new Date,options:E,map:t};return s(),r(),a(),f(P),E.debug&&console&&console.log(P),I}}function m(){return e.extend({},p(),b.options)}function h(e){v||(v=n()),e.is(":visible")||(e.remove(),e=null,0===v.children().length&&(v.remove(),w=void 0))}var v,C,w,T=0,O={error:"error",info:"info",success:"success",warning:"warning"},b={clear:r,remove:c,error:t,getContainer:n,info:o,options:{},subscribe:s,success:i,version:"2.1.3",warning:a};return b}()})}("function"==typeof define&&define.amd?define:function(e,t){"undefined"!=typeof module&&module.exports?module.exports=t(require("jquery")):window.toastr=t(window.jQuery)});
+
+
+    if('{{message}}'){
+
+    
+    $(document).ready(function() {
+        
+        toastr.options.timeOut = 800;
+        toastr.success('{{message}}');
+    });
+
+}
+    </script>
+
+</body>
+
+</html>

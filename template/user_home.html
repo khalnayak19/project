@@ -1,0 +1,198 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>BookMyShoot</title>
+    <!-- google-fonts -->
+    <link href="//fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="//fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- //google-fonts -->
+    <!-- Template CSS Style link -->
+    <link rel="stylesheet" href="/static/latest/assets/css/style-starter.css">
+</head>
+<body>
+<!-- <script>
+    function goaway(){
+        window.location="/userhome"
+    }
+</script> -->
+    <!--header-->
+    <header id="site-header" class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg stroke">
+                <h1>
+                    <a class="navbar-brand" href="index.html">
+                        BookMy<i class="fas fa-camera"></i>Shoot
+                    </a>
+                </h1>
+                <!-- if logo is image enable this   
+    <a class="navbar-brand" href="#index.html">
+        <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+    </a> -->
+                <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+                    data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav mx-lg-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/userhome">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/userupdateprofile">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#category">Category</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/userviewbooking">Bookings</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="/userviewwork">View Work</a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="/useraddfeedback">Send Feedback</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Logout</a>
+                        </li>
+                     
+                    </ul>
+                </div>
+                <!-- search button -->
+                <div class="search-right ml-lg-3">
+                    <div class="search-container">
+                        <form action="#category" method="post">
+                            <input class="search expandright" id="searchright" type="search" name="q"
+                                placeholder="Search">
+                            <label class="button searchbutton" for="searchright"><i class="fas fa-search"></i></label>
+                        </form>
+                    </div>
+                </div>
+                <!-- //search button -->
+                <!-- toggle switch for light and dark theme -->
+                <div class="cont-ser-position">
+                    <nav class="navigation">
+                        <div class="theme-switch-wrapper">
+                            <label class="theme-switch" for="checkbox">
+                                <input type="checkbox" id="checkbox">
+                                <div class="mode-container">
+                                    <i class="gg-sun"></i>
+                                    <i class="gg-moon"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </nav>
+                </div>
+                <!-- //toggle switch for light and dark theme -->
+            </nav>
+        </div>
+    </header>
+
+    
+
+
+<div class="slider-container" id="home">
+  <div class="left-slide">
+          <div style="background: url('/static/latest/assets/images/leftbg.jpg');background-size: cover;">
+            <h3 class="mt-5 mb-3">STREAM ADS</h3>
+            <h4>WEDDING CINEMAS</h4>
+            <h3 class="mt-5 mb-3">Welcome {{username}}</h3>
+      </div>
+  </div>
+  <div class="right-slide">
+      <div style=" background: url('/static/latest/assets/images/mainbg2.jpg');
+      background-size: cover;"></div>
+  </div>
+</div>
+
+<div class="slider-container" id="about">
+    <div class="left-slide">
+        <div style="background: url('/static/latest/assets/images/left2.jpg');background-size: cover;">
+            <!-- <h3 class="mt-5 mb-3">Best Photo Studio</h3>
+            <h4>A high quality photography</h4>
+            <p class="mt-4">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo.</p>
+            <a href="#login" class="btn btn-style mt-5">Explore</a> -->
+        </div>
+    </div>
+    <div class="right-slide">
+        <div style="margin-left: 30px;">
+          <br><br><br><br><br><br>
+          <h3>About Us</h3>
+          <p class="lead mt-2">We are a team of passionate and creative professionals who specialize in capturing the most precious moments of your life. We understand the importance of your special day and strive to provide you with the highest quality wedding cinematography and photography services.</p>
+
+          <p class="lead mt-2">Our team of experts has years of experience in the industry and is well-equipped with the latest technology and equipment to deliver breathtakingly beautiful wedding films and photographs. We are committed to providing a personalized and customized experience to each of our clients, ensuring that every detail of your special day is captured perfectly.</p>
+            
+          <p class="lead mt-2">At Stream Ads, we believe that each wedding is unique and special, and we make sure that every film and photograph we create reflects this. We take great pride in our ability to create stunning and timeless wedding films and photographs that you will cherish for a lifetime.</p>
+            
+          <p class="lead mt-2">Our services include pre-wedding shoots, wedding cinematography, photography, and post-production editing. We also offer a range of packages to suit your individual needs and budget.</p>
+            
+          <p class="lead mt-2">Our team is dedicated to providing you with exceptional customer service, and we are always available to answer any questions or concerns you may have. We understand that planning a wedding can be overwhelming, and we are here to make the process as easy and stress-free as possible.</p>
+            
+          <p class="lead mt-2"> Thank you for considering Stream Ads Wedding Cinemas and Photography for your special day. We look forward to capturing your most precious memories and creating a beautiful and timeless film and photograph collection that you will cherish for years to come.</p>
+        </div>
+    </div>
+</div>
+
+<section class="w3l-gallery py-5" id="category">
+    <div class="container py-md-5 py-4">
+        <div class="title-heading-w3 text-center mx-auto mb-sm-5 mb-4" style="max-width:700px">
+            <h3 class="title-style">Gallery</h3>
+            <p class="lead mt-2">Works based on Categories.</p>
+        </div>
+        <div class="row">
+
+        {% for i in view3 %}
+            <div class="col-md-4 col-sm-6 mt-4" >
+                <div class=" item">
+                    <a 
+                        class="zoom d-block">
+                        <img class="card-img-bottom d-block" style="width: 400px;height: 240px;" src="/static/media/{{i.image}}" alt="Card image cap">
+                        <span class="overlay__hover"></span>
+                        <span class="hover-content">
+                            <span class="title">{{ i.category }}</span>
+                            <button style="font-size: 12px;padding: 3px 5px;border: none;" onclick="goCat('{{ i.category_id }}')">View Services </button>
+                            <button style="font-size: 12px;padding: 3px 5px;border: none;" onclick="goLog('{{ i.category_id }}')">View Works</button> 
+                            <!-- <button style="font-size: 12px;padding: 3px 5px;border: none;" onclick="goLog('{{ i.category_id }}')">Book Now</button>  -->
+                            <span class="content"></span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+
+            <script>
+
+                function goCat(id){
+                    // console.log(id)
+                    location.href=`/userviewservice/${id}`
+                }
+                function goLog(id){
+                    // console.log(id)
+                    location.href=`/userviewwork/${id}`
+                }
+
+
+
+            </script>
+
+              
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+{% include 'footer.html' %}
